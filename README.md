@@ -132,13 +132,13 @@ Y = torch.from_numpy(Y)
 ````
 Now, we need to obtain the weights W and biases B, of the best fit to this dataset. Initialize W and B with random values.
 ````python
-W = torch.randn(2,1,requires_grad=True)
+W = torch.randn(1,2,requires_grad=True)   # Because W Transpose should be 2x1
 B = torch.randn(5,1,requires_grad=True)
 ````
 Define the model
 ````python
 def model(X):
-    return X @ W.t() + b
+    return X @ W.t() + B
 ````
 **@** represents matrix multiplication in PyTorch and **.t()** returns Transpose of a tensor
 Let our predictions be ````Y_````
