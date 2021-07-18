@@ -124,7 +124,6 @@ X = np.array([[67,73],
 Our actual output vector Y is
 ````python
 Y = np.array([56,81,119,22,103],dtype='float32')
-Y.reshape(5,1)
 ````
 Convert these to Torch Tensors
 ````python
@@ -136,3 +135,59 @@ Now, we need to obtain the weights W and biases B, of the best fit to this datas
 W = torch.randn(2,1,requires_grad=True)
 B = torch.randn(5,1,requires_grad=True)
 ````
+Define the model
+````python
+def model(X):
+    return X @ W.t() + b
+````
+**@** represents matrix multiplication in PyTorch and **.t()** returns Transpose of a tensor
+Let our predictions be ````Y_````
+````python
+Y_ = model(X)
+````
+Define the Loss Function. Considering MSE Loss
+````python
+def MSE(y,h):
+    diff = h - y
+    return torch.sum(diff**2)/diff.numel()
+````
+**torch.sum()** returns sum of elements of a tensor and **.numel()** returns the number of elements in a tensor.                  
+Compute the Loss for our model
+````python
+Loss = MSE(Y,Y_)
+````
+Back Propogation
+````python
+Loss.backward()
+````
+Gradients for weights W and biases B
+````python
+W.grad     # Same Size as W
+B.grad
+````
+Updating our weights W. Consider a learning rate of 1e-5.
+````python
+a = 1e-5
+with torch.no_grad():
+    W -= a*(W.grad)
+    B -= a*(B.grad) 
+````
+We use ````torch.no_grad()```` to indicate to PyTorch that we shouldn't track, calculate, or modify gradients while updating the weights and biases.        
+Now, reset the gradients to zero. We need to do this because PyTorch accumulates gradients. Otherwise, the next time we invoke backprop on the loss, the new gradient values are added to the existing gradients, which may lead to unexpected results.
+````python
+W.grad.zero_()
+B.grad.zero_()
+````
+Repeat the steps until the loss is significantly minimized. Let us train for 100 Epochs:
+````python
+for epoch in range(100):
+    Y_ = model(X)
+    Loss = MSE(Y, Y_)
+    Loss.backward()
+    with torch.no_grad():
+        W -= W.grad * a
+        B -= B.grad * a
+        W.grad.zero_()
+        B.grad.zero_()
+````
+Compute the Loss now and verify that it is lower. Compare the actual outputs and predicted outputs.
