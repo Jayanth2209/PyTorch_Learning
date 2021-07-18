@@ -53,12 +53,13 @@ w = torch.tensor(3.,requires_grad=True)
 b = torch.tensor(7.,requires_grad=True)
 y = w*x + b
 ````
-If you print y, you can see that it is a tensor with one entry = 13. For Backprop,       
+If you print y, you can see that it is a tensor with one entry = 13. We set ````requires_grad=True```` for making the tensors utilizable for certain functions. For example, we can perform Backprop as follows       
 ````python
 y.backward()
 print('dy/dx:', x.grad)
 print('dy/dw:', w.grad)
 print('dy/db:', b.grad)
 ````
-We obtain derivatives of y w.r.t x,w and b as 3,2 and 1. 
+We obtain derivatives of y w.r.t x,w and b as 3,2 and 1. If we had set ````requires_grad=False````, these would print out as ````None````          
+
 
