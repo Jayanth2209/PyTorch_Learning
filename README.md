@@ -30,7 +30,7 @@ t1 = torch.tensor([[1,2,3],
                   [4,5,6],
                   [7.0,8,9]])
 ````
-Now, t1 is a 3x3 Tensor with dtype "float32". Since one entry (7.0) is a floating point entry, the rest will be converted to FP too.
+Now, t1 is a 3x3 Tensor with dtype "float32". Since one entry (7.0) is a floating point entry, the rest will be converted to FP too.             
 To obtain the shape, we use
 ````python
 t1.shape
@@ -44,6 +44,21 @@ t2 = torch.tensor([[[1,2,3,4],
                    [13,14,15,16],
                    [17,18,19,20]]])
 ````
-Similarly nD Tensors can also be constructed
-
+Similarly nD Tensors can also be constructed.         
+#### Gradients
+We can perform arithmetic operations on Torch tensors
+````python
+x = torch.tensor(2.,requires_grad=True)
+w = torch.tensor(3.,requires_grad=True)
+b = torch.tensor(7.,requires_grad=True)
+y = w*x + b
+````
+If you print y, you can see that it is a tensor with one entry = 13. For Backprop,       
+````python
+y.backward()
+print('dy/dx:', x.grad)
+print('dy/dw:', w.grad)
+print('dy/db:', b.grad)
+````
+We obtain derivatives of y w.r.t x,w and b as 3,2 and 1. 
 
