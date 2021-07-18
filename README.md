@@ -99,3 +99,17 @@ n2 = t6.numpy()
 #### Why PyTorch over Numpy?
 * **Autograd**: The ability to automatically compute gradients for tensor operations is essential for training deep learning models.            
 * **GPU Support**: While working with massive datasets and large models, PyTorch tensor operations can be performed efficiently using a Graphics Processing Unit (GPU). Computations that might typically take hours can be completed within minutes using GPUs.
+
+### Linear Regression - PyTorch
+````
+Y = W*X + B
+````
+Y = Output, X = Input, W = Weights and B = Bias. Mathematically, Y = X x W Transpose + B.       
+Let us consider the following input dataset
+| Rainfall (X1) | Temperature (X2) | Yield (Y) |
+| 67 | 73 | 56 |
+| 88 | 91 | 81 |
+| 134 | 87 | 119 |
+| 43 | 102 | 22 |
+| 96 | 69 | 103 |
+
