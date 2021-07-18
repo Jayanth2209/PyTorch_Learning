@@ -113,4 +113,26 @@ Let us consider the following input dataset
 | 134 | 87 | 119 |
 | 43 | 102 | 22 |
 | 96 | 69 | 103 |
-
+So our input array X is
+````python
+X = np.array([[67,73],
+              [88,91],
+              [134,87],
+              [43,102],
+              [96,69]],dtype='float32')
+````
+Our actual output vector Y is
+````python
+Y = np.array([56,81,119,22,103],dtype='float32')
+Y.reshape(5,1)
+````
+Convert these to Torch Tensors
+````python
+X = torch.from_numpy(X)
+Y = torch.from_numpy(Y)
+````
+Now, we need to obtain the weights W and biases B, of the best fit to this dataset. Initialize W and B with random values.
+````python
+W = torch.randn(2,1,requires_grad=True)
+B = torch.randn(5,1,requires_grad=True)
+````
