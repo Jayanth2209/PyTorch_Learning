@@ -190,4 +190,4 @@ for i in range(N):
         B.grad.zero_()
 ````
 Compute the Loss now and verify that it is lower. Compare the actual outputs and predicted outputs.          
-###### Note: You will obtain a high loss around 13%. For a better fit, we will probably need a larger dataset?? 
+###### Note: You will obtain a high loss. For a better fit, we will need a larger dataset. 
