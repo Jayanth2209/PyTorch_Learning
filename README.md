@@ -78,4 +78,23 @@ t4 is the concatenation t2 and t3
 t5 = t2.reshape(3,2,2)
 ````
 t5 is reshaped version of t2 with size 3x2x2
-
+### Numpy & Torch
+````python
+import numpy as np
+````
+For creating a Numpy Array of size 2x3
+````python
+n1 = np.array([[1, 2, 3], [3., 4, 5]])
+````
+Note that dtype is float due to the presence of a one "3.". This is because numpy array has uniformity too.            
+Converting Numpy array to Torch Tensor
+````python
+t6 = torch.from_numpy(n1)
+````
+Converting Torch tensor to Numpy array
+````python
+n2 = t6.numpy()
+````
+##### Why PyTorch over Numpy?
+* **Autograd**: The ability to automatically compute gradients for tensor operations is essential for training deep learning models.            
+* **GPU Support**: While working with massive datasets and large models, PyTorch tensor operations can be performed efficiently using a Graphics Processing Unit (GPU). Computations that might typically take hours can be completed within minutes using GPUs.
