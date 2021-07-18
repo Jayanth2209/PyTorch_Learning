@@ -67,7 +67,7 @@ t2 = torch.ones(3,4)
 ````
 t2 will be a 3x4 Tensor with all entries as "1" and dtype is "float32" by default
 ````python
-t3 = torch.full((2,5),7.384)
+t3 = torch.full((3,4),7.384)
 ````
 t3 will be a 2x5 Tensor with all entries as "7.384"
 ````python
