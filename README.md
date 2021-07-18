@@ -19,7 +19,7 @@ import torch
 ````
 #### What is a Tensor? 
 [Tensors](https://pytorch.org/docs/stable/torch.html)
-A Tensor is a number, vector, matrix, or any n-dimensional array. A tensor has an additional property of uniformity in the data type of all entries and that they are always of a proper shape i.e., the lenghts of rows are all same, and the same goes with columns.        
+: A Tensor is a number, vector, matrix, or any n-dimensional array. A tensor has an additional property of uniformity in the data type of all entries and that they are always of a proper shape i.e., the lenghts of rows are all same, and the same goes with columns.        
 ````python
 t1 = torch.tensor([[1,2,3],
                   [4,5,6],
