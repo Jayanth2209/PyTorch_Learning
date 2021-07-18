@@ -17,7 +17,8 @@ Learning PyTorch for DNNs
 ````python
 import torch
 ````
-#### What is a Tensor?
+#### What is a Tensor? 
+[Refer](https://pytorch.org/docs/stable/torch.html)
 A Tensor is a number, vector, matrix, or any n-dimensional array. A tensor has an additional property of uniformity in the data type of all entries and that they are always of a proper shape i.e., the lenghts of rows are all same, and the same goes with columns.        
 ````python
 t1 = torch.tensor([[1,2,3],
@@ -95,6 +96,6 @@ Converting Torch tensor to Numpy array
 ````python
 n2 = t6.numpy()
 ````
-##### Why PyTorch over Numpy?
+#### Why PyTorch over Numpy?
 * **Autograd**: The ability to automatically compute gradients for tensor operations is essential for training deep learning models.            
 * **GPU Support**: While working with massive datasets and large models, PyTorch tensor operations can be performed efficiently using a Graphics Processing Unit (GPU). Computations that might typically take hours can be completed within minutes using GPUs.
