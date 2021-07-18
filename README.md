@@ -1,4 +1,4 @@
-# PyTorch_Learning
+# PyTorch Tutorial
 Learning PyTorch for DNNs
 ## Install PyTorch
 ````
@@ -31,3 +31,19 @@ t1 = torch.tensor([[1,2,3],
                   [7.0,8,9]])
 ````
 Now, t1 is a 3x3 Tensor with dtype "float32". Since one entry (7.0) is a floating point entry, the rest will be converted to FP too.
+To obtain the shape, we use
+````python
+t1.shape
+````
+Here is an example of a 3D Tensor of size 2x3x4
+````python
+t2 = torch.tensor([[[1,2,3,4],
+                   [5,6,7,8],
+                   [9,10,11,12]],
+                   [[9,10,11,12],
+                   [13,14,15,16],
+                   [17,18,19,20]]])
+````
+Similarly nD Tensors can also be constructed
+
+
