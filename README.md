@@ -107,6 +107,7 @@ Y = W*X + B
 Y = Output, X = Input, W = Weights and B = Bias. Mathematically, Y = X x W Transpose + B.       
 Let us consider the following input dataset
 | Rainfall (X1) | Temperature (X2) | Yield (Y) |
+|      :-:      |      :-:         |      :-:  |
 | 67 | 73 | 56 |
 | 88 | 91 | 81 |
 | 134 | 87 | 119 |
