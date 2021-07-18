@@ -165,9 +165,8 @@ Gradients for weights W and biases B
 W.grad     # Same Size as W
 B.grad
 ````
-Updating our weights W. Consider a learning rate of 1e-5.
+Updating our weights W. Consider a learning rate of "a"
 ````python
-a = 1e-5
 with torch.no_grad():
     W -= a*(W.grad)
     B -= a*(B.grad) 
@@ -178,9 +177,9 @@ Now, reset the gradients to zero. We need to do this because PyTorch accumulates
 W.grad.zero_()
 B.grad.zero_()
 ````
-Repeat the steps until the loss is significantly minimized. Let us train for 100 Epochs:
+Repeat the steps until the loss is significantly minimized. For N Epochs:
 ````python
-for epoch in range(100):
+for i in range(N):
     Y_ = model(X)
     Loss = MSE(Y, Y_)
     Loss.backward()
