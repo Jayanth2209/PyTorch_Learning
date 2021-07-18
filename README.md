@@ -1,6 +1,17 @@
 # PyTorch_Learning
 Learning PyTorch for DNNs
 ## Install PyTorch
+````
+# Linux / Binder
+# !pip install numpy torch==1.7.0+cpu torchvision==0.8.1+cpu torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+# Windows
+# !pip install numpy torch==1.7.0+cpu torchvision==0.8.1+cpu torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+# MacOS
+# !pip install numpy torch torchvision torchaudio
+
+````
 
 #### Import Torch
 ````python
