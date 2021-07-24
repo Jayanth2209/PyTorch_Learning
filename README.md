@@ -1,5 +1,5 @@
 1. [PyTorch Basics & Linear Regression](/PyTorch Basics & Linear Regression)
-2. [Logistic Regression - MNIST](/Logistic Regression - MNIST)
+2. [Logistic Regression - MNIST](https://github.com/Jayanth2209/PyTorch_Learning/tree/main/Logistic%20Regression%20-%20MNIST)
 3. [Deep Neural Networks - MNIST](https://github.com/Jayanth2209/PyTorch_Learning/tree/main/DNNs%20on%20GPU)
 4. [Convolutional Neural Networks - CIFAR10](https://github.com/Jayanth2209/PyTorch_Learning/tree/main/CNN%20-%20CIFAR10)
 5. [Residual Neural Networks - CIFAR10](https://github.com/Jayanth2209/PyTorch_Learning/tree/main/ResNet%20-%20CIFAR10)
