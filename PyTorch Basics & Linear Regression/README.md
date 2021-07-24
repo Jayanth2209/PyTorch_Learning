@@ -190,3 +190,5 @@ for i in range(N):
 ````
 Compute the Loss now and verify that it is lower. Compare the actual outputs and predicted outputs.          
 ###### Note: You will obtain a high loss. For a better fit, we will need a larger dataset. 
+
+Further Reading and code on [this Notebook]()
