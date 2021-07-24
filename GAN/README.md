@@ -1,2 +1,2 @@
-## General Adversarial Networks on PyTorch - using MNIST Dataset
+## Generative Adverserial Networks on PyTorch - using MNIST Dataset
 [Notebook]()
