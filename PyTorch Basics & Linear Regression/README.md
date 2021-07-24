@@ -1,5 +1,5 @@
 # PyTorch Basics and Linear Regression
-[USE THIS](https://github.com/Jayanth2209/PyTorch_Learning/blob/main/PyTorch%20Basics%20%26%20Linear%20Regression/PyTorch_Basics_%26_Linear_Regression.ipynb)
+[USE THIS NOTEBOOK](https://github.com/Jayanth2209/PyTorch_Learning/blob/main/PyTorch%20Basics%20%26%20Linear%20Regression/PyTorch_Basics_%26_Linear_Regression.ipynb)
 ## Install PyTorch
 You can instead run on Colab/Kaggle
 ````
