@@ -1,4 +1,5 @@
 # PyTorch Basics and Linear Regression
+[USE THIS](https://github.com/Jayanth2209/PyTorch_Learning/blob/main/PyTorch%20Basics%20%26%20Linear%20Regression/PyTorch_Basics_%26_Linear_Regression.ipynb)
 ## Install PyTorch
 You can instead run on Colab/Kaggle
 ````
@@ -190,5 +191,3 @@ for i in range(N):
 ````
 Compute the Loss now and verify that it is lower. Compare the actual outputs and predicted outputs.          
 ###### Note: You will obtain a high loss. For a better fit, we will need a larger dataset. 
-
-Further Reading and code on [this Notebook]()
